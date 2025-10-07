@@ -1,33 +1,24 @@
 #include <stdio.h>
-int main() {
-	int min;
-	int max;
-	scanf_s("%d", &min);
-	scanf_s("%d", &max);
-	int i = min;
-	int enable = 0;
-	for (i; i <= max; i += 2) {
-		if (i % 2 == 0) {
-			i++;
-		}
-		else {
-			//pass
-		}
-		for (int j = 3; j*j <= i; j += 2) {
-			if (i % j == 0) {
-				enable++;
-				break;
-			}
-			else {
-				//pass
-			}
-		}
-		if (enable == 0) {
-			printf("%d\n", i);
-		}
-		else {
-			enable = 0;
-		}
+void display(int a ,int b[]) {
+	for (int i = 1; i <= a; i++) {
+		printf("%d\n", b[i-1]);
 	}
+	return;
+}
+int main() {
+	int arr[5] = { 1,2,3,4,5 };
+	int a = arr[0];
+	int b = arr[2];
+	int c = arr[4];
+	/*display(5, arr[5]);*/
+	printf("%d\n", a);
+	printf("%d\n", b);
+	printf("%d\n", c);
+	printf("%d\n", arr[0]);
+	int sigma = a + b + c;
+	printf("%d\n", sigma);
+	arr[4] = 10;
+	printf("%d\n", arr[4]);
+	/*display(5, arr[5]);*/
 	return 0;
 }
